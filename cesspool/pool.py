@@ -44,6 +44,8 @@ class Pool(object):
 
 	def rm(self,uid):
                 return self.find_dl(uid).rm()
+	def pause(self,uid):
+                return self.find_dl(uid).rm()
 
 	def find_dl(self,uid):
 		uid=int(uid)
@@ -107,6 +109,7 @@ class Pool(object):
 
 	commands={
 		'rm':rm,
+		'pause':pause,
 		'add':add,
 		'pool':get_pool,
 		'tell':tell_download,
